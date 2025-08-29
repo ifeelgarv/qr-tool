@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   const playThemeSound = () => {
     try {
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
+      const audioContext = new (window.AudioContext || (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext!)()
       const oscillator = audioContext.createOscillator()
       const gainNode = audioContext.createGain()
 
@@ -31,7 +31,7 @@ export function ThemeToggle() {
 
       oscillator.start(audioContext.currentTime)
       oscillator.stop(audioContext.currentTime + 0.2)
-    } catch (error) {
+    } catch {
       // Fallback for browsers that don't support Web Audio API
       console.log("Theme switched")
     }

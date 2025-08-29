@@ -171,6 +171,7 @@ export default function QRGenerator() {
 
   useEffect(() => {
     generateQR()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content, selectedStyle])
 
   const downloadSVG = async () => {
@@ -265,7 +266,7 @@ export default function QRGenerator() {
                 onHoverStart={() => {
                   // Add hover sound effect
                   try {
-                    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
+                    const audioContext = new (window.AudioContext || (window as typeof window & { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
                     const oscillator = audioContext.createOscillator()
                     const gainNode = audioContext.createGain()
 
@@ -281,8 +282,8 @@ export default function QRGenerator() {
 
                     oscillator.start(audioContext.currentTime)
                     oscillator.stop(audioContext.currentTime + 0.1)
-                  } catch (error) {
-                    // Silently fail if audio context is not available
+                  } catch (error: unknown) {
+                    console.error("AudioContext error on hover:", error);
                   }
                 }}
               >
@@ -378,7 +379,7 @@ export default function QRGenerator() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                {TOOLS.map((tool, index) => {
+                {TOOLS.map((tool) => {
                   const IconComponent = tool.icon
                   return (
                     <motion.div
