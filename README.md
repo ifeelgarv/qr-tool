@@ -91,14 +91,7 @@ qr-tool/
 └── tsconfig.json
 ```
 
-### Contributing
-
-We welcome contributions to improve this project!  
-Follow the steps below to get started:
-
----
-
-## Contribution Workflow
+### Contribution
 
 1. **Fork the repository**
     ```bash
