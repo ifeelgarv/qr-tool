@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## QRTool : A Nextjs tool for generating QR.
 
-## Getting Started
+Welcome to, A simple and efficient QR Code tool built with modern tech stack, easily create QR codes for links and text with a clean and responsive UI.
 
-First, run the development server:
+![HeroSectionImage](https://i.postimg.cc/0jxnTgZw/qrtool.png)
+
+
+### Features :
+- Generate QR codes instantly
+- Download QR codes as images
+- Customizable size and styles
+- Responsive and minimal UI
+- Built with performance in mind
+
+**Frontend:**
+
+- **Next.js 15.3.3** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Motion** - Animation library
+- **shadcn/ui** - Pre-built components
+
+
+**Development Tools:**
+
+- **NPM** - Package manager and runtime
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+
+## Contributing & Installation
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/ifeelgarv/qr-tool.git
+   cd qr-generator
+   ```
+
+2. **Install dependencies**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Start development server**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Folder Structure
+qr-tool/
+├── .next/                       # Next.js build output
+├── node_modules/                # Installed dependencies
+├── public/                      # Static assets
+│   ├── fonts/                   # Custom fonts
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── src/                         # Application source code
+│   ├── app/                     # Next.js App Router
+│   │   ├── favicon.ico
+│   │   ├── globals.css          # Global styles
+│   │   ├── layout.tsx           # Root layout
+│   │   └── page.tsx             # Home page
+│   ├── components/              # Reusable components
+│   │   └── ui/                  # UI components
+│   │       ├── button.tsx
+│   │       ├── input.tsx
+│   │       ├── select.tsx
+│   │       ├── theme-provider.tsx
+│   │       └── theme-toggle.tsx
+│   └── lib/                     # Utility functions
+│       └── utils.ts
+├── .gitignore
+├── components.json
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Contributing
 
-## Deploy on Vercel
+We welcome contributions to improve this project!  
+Follow the steps below to get started:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribution Workflow
+
+1. **Fork the repository**
+
+   Click the **Fork** button at the top right of this repository to create your own copy.
+
+2. **Create a new branch**
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. **Make your changes**
+
+   Implement your feature, fix, or improvement.
+
+4. **Commit your changes**
+
+   ```bash
+   git commit -m "feat: add new feature"
+   ```
+
+5. **Push to your branch**
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+6. **Open a Pull Request**
+
+   Go to the original repository and open a PR from your forked branch. 🎉
+
