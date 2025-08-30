@@ -40,9 +40,9 @@ Welcome to, A simple and efficient QR Code tool built with modern tech stack, ea
 
 2. **Install dependencies**
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 
 3. **Start development server**
@@ -53,6 +53,7 @@ npm install
 
 
 ### Folder Structure
+```
 qr-tool/
 ├── .next/                       # Next.js build output
 ├── node_modules/                # Installed dependencies
@@ -88,7 +89,7 @@ qr-tool/
 ├── postcss.config.mjs
 ├── README.md
 └── tsconfig.json
-
+```
 
 ### Contributing
 
@@ -100,8 +101,9 @@ Follow the steps below to get started:
 ## Contribution Workflow
 
 1. **Fork the repository**
-
+    ```bash
    Click the **Fork** button at the top right of this repository to create your own copy.
+   ```
 
 2. **Create a new branch**
 
@@ -110,8 +112,9 @@ Follow the steps below to get started:
    ```
 
 3. **Make your changes**
-
+    ```bash
    Implement your feature, fix, or improvement.
+   ```
 
 4. **Commit your changes**
 
@@ -126,6 +129,6 @@ Follow the steps below to get started:
    ```
 
 6. **Open a Pull Request**
-
-   Go to the original repository and open a PR from your forked branch. 🎉
-
+    ```bash
+   Go to the original repository and open a PR from your forked branch.
+   ```
