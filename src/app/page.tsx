@@ -229,7 +229,7 @@ export default function QRGenerator() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <div className="fixed left-4 bottom-4 z-10">
+      <div className="fixed left-4 bottom-4 z-10 md:block hidden">
         <div className="flex flex-col gap-4">
           {SHORTCUTS.map((shortcut, index) => (
             <motion.div
@@ -317,9 +317,9 @@ export default function QRGenerator() {
       </div>
 
       <div className="fixed right-4 bottom-4 z-10">
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           <motion.button
-            className="p-2 text-muted-foreground hover:text-foreground transition-all duration-200 hover:glow-sm rounded-lg bg-card/50 backdrop-blur-sm"
+            className="p-2 text-muted-foreground hover:text-foreground transition-all duration-200 hover:glow-sm rounded-lg bg-card/50 backdrop-blur-sm hidden sm:block"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}
@@ -329,7 +329,7 @@ export default function QRGenerator() {
             <ZoomIn className="w-4 h-4" />
           </motion.button>
           <motion.button
-            className="p-2 text-muted-foreground hover:text-foreground transition-all duration-200 hover:glow-sm rounded-lg bg-card/50 backdrop-blur-sm"
+            className="p-2 text-muted-foreground hover:text-foreground transition-all duration-200 hover:glow-sm rounded-lg bg-card/50 backdrop-blur-sm hidden sm:block"
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, y: 20 }}
@@ -446,7 +446,7 @@ export default function QRGenerator() {
                   Design QR codes
                 </motion.h1>
                 <motion.p
-                  className="text-muted-foreground text-sm mt-2 text-left sm:text-base"
+                  className="text-muted-foreground text-xs sm:text-sm mt-2 text-left sm:text-base whitespace-nowrap"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
@@ -501,7 +501,7 @@ export default function QRGenerator() {
                     </AnimatePresence>
                   </motion.div>
 
-                  <div className="flex justify-start gap-2">
+                  <div className="flex flex-wrap justify-start gap-2">
                     <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.97 }}>
                       <Button
                         variant="ghost"
@@ -537,7 +537,9 @@ export default function QRGenerator() {
                         setError("")
                       }}
                       placeholder="Enter URL or text to encode"
-                      className="bg-card/50 text-sm px-3 py-2 border border-border/50 rounded-md focus:ring-2 focus:ring-primary/20 transition-all duration-200 w-full backdrop-blur-sm placeholder:text-muted-foreground"
+                      className="bg-card/50 text-xs sm:text-sm px-2 sm:px-3 py-2 border border-border/50 rounded-md 
+             focus:ring-2 focus:ring-primary/20 transition-all duration-200 w-full 
+             backdrop-blur-sm placeholder:text-muted-foreground"
                       autoFocus
                     />
                   </div>
