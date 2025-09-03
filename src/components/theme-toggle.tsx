@@ -14,6 +14,8 @@ export function ThemeToggle() {
   }, [])
 
   const playThemeSound = () => {
+
+    // will change later as it is AI generated code
     try {
       const audioContext = new (window.AudioContext || (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext!)()
       const oscillator = audioContext.createOscillator()
