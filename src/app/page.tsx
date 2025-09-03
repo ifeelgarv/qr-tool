@@ -264,7 +264,7 @@ export default function QRGenerator() {
                   transition: { type: "spring", delay: 0, duration: 0 }
                 }}
                 onHoverStart={() => {
-                  // Add hover sound effect
+                  // Add hover sound effect will change later as it is AI generated code
                   try {
                     const audioContext = new (window.AudioContext || (window as typeof window & { webkitAudioContext: typeof AudioContext }).webkitAudioContext)()
                     const oscillator = audioContext.createOscillator()
